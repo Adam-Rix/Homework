@@ -1,0 +1,626 @@
+[
+  {
+    "id": 1,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/skos.html#skos",
+      "name": "skos"
+    },
+    "nodes": 144,
+    "edges": 252,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/skos.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 2,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/wc.html#wc",
+      "name": "wc"
+    },
+    "nodes": 332,
+    "edges": 269,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/wc.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 3,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/generations.html#generations",
+      "name": "generations"
+    },
+    "nodes": 129,
+    "edges": 273,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/generations.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 4,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/travel.html#travel",
+      "name": "travel"
+    },
+    "nodes": 131,
+    "edges": 277,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/travel.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 5,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/univ.html#univ",
+      "name": "univ"
+    },
+    "nodes": 179,
+    "edges": 293,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/univ.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 6,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/atom.html#atom",
+      "name": "atom"
+    },
+    "nodes": 291,
+    "edges": 425,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/atom.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 7,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/biomedical.html#biomedical",
+      "name": "biomedical"
+    },
+    "nodes": 341,
+    "edges": 459,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/biomedical.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 8,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/bzip.html#bzip",
+      "name": "bzip"
+    },
+    "nodes": 632,
+    "edges": 556,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/bzip.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 9,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/foaf.html#foaf",
+      "name": "foaf"
+    },
+    "nodes": 256,
+    "edges": 631,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/foaf.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 10,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/foaf.html#foaf",
+      "name": "foaf"
+    },
+    "nodes": 256,
+    "edges": 631,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/foaf.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 11,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/people.html#people",
+      "name": "people"
+    },
+    "nodes": 337,
+    "edges": 640,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/people.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 12,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/pr.html#pr",
+      "name": "pr"
+    },
+    "nodes": 815,
+    "edges": 692,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/pr.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 13,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/pr.html#pr",
+      "name": "pr"
+    },
+    "nodes": 815,
+    "edges": 692,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/pr.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 14,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/funding.html#funding",
+      "name": "funding"
+    },
+    "nodes": 778,
+    "edges": 1086,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/funding.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 15,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/ls.html#ls",
+      "name": "ls"
+    },
+    "nodes": 1687,
+    "edges": 1453,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/ls.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 16,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/wine.html#wine",
+      "name": "wine"
+    },
+    "nodes": 733,
+    "edges": 1839,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/wine.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 17,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/pizza.html#pizza",
+      "name": "pizza"
+    },
+    "nodes": 671,
+    "edges": 1980,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/pizza.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 18,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/gzip.html#gzip",
+      "name": "gzip"
+    },
+    "nodes": 2687,
+    "edges": 2293,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/gzip.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 19,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/core.html#core",
+      "name": "core"
+    },
+    "nodes": 1323,
+    "edges": 2752,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/core.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 20,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/pathways.html#pathways",
+      "name": "pathways"
+    },
+    "nodes": 6238,
+    "edges": 12363,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/pathways.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 21,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/lusearch.html#lusearch",
+      "name": "lusearch"
+    },
+    "nodes": 6238,
+    "edges": 12363,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/lusearch.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 22,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/sunflow.html#sunflow",
+      "name": "sunflow"
+    },
+    "nodes": 15464,
+    "edges": 15957,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/sunflow.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 23,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/luindex.html#luindex",
+      "name": "luindex"
+    },
+    "nodes": 18532,
+    "edges": 17375,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/luindex.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 24,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/avrora.html#avrora",
+      "name": "avrora"
+    },
+    "nodes": 24690,
+    "edges": 25196,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/avrora.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 25,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/eclipse.html#eclipse",
+      "name": "eclipse"
+    },
+    "nodes": 41383,
+    "edges": 40200,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/eclipse.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 26,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/h2.html#h2",
+      "name": "h2"
+    },
+    "nodes": 44717,
+    "edges": 56683,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/h2.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 27,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/pmd.html#pmd",
+      "name": "pmd"
+    },
+    "nodes": 54444,
+    "edges": 59329,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/pmd.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 28,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/xalan.html#xalan",
+      "name": "xalan"
+    },
+    "nodes": 58476,
+    "edges": 62758,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/xalan.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 29,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/batik.html#batik",
+      "name": "batik"
+    },
+    "nodes": 60175,
+    "edges": 63089,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/batik.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 30,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/fop.html#fop",
+      "name": "fop"
+    },
+    "nodes": 86183,
+    "edges": 83016,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/fop.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 31,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/enzyme.html#enzyme",
+      "name": "enzyme"
+    },
+    "nodes": 48815,
+    "edges": 86543,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/enzyme.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 32,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/tomcat.html#tomcat",
+      "name": "tomcat"
+    },
+    "nodes": 111327,
+    "edges": 110884,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/tomcat.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 33,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/jython.html#jython",
+      "name": "jython"
+    },
+    "nodes": 191895,
+    "edges": 260034,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/jython.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 34,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/eclass.html#eclass",
+      "name": "eclass"
+    },
+    "nodes": 239111,
+    "edges": 360248,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/eclass.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 35,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/tradebeans.html#tradebeans",
+      "name": "tradebeans"
+    },
+    "nodes": 439693,
+    "edges": 466969,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/tradebeans.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 36,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/tradesoap.html#tradesoap",
+      "name": "tradesoap"
+    },
+    "nodes": 440680,
+    "edges": 468263,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/tradesoap.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 37,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/go_hierarchy.html#go-hierarchy",
+      "name": "go_hierarchy"
+    },
+    "nodes": 45007,
+    "edges": 490109,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/go_hierarchy.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 38,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/go.html#go",
+      "name": "go"
+    },
+    "nodes": 582929,
+    "edges": 1437437,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/go.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 39,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/apache.html#apache",
+      "name": "apache"
+    },
+    "nodes": 1721418,
+    "edges": 1510411,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/apache.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 40,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/init.html#init",
+      "name": "init"
+    },
+    "nodes": 2446224,
+    "edges": 2112809,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/init.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 41,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/mm.html#mm",
+      "name": "mm"
+    },
+    "nodes": 2538243,
+    "edges": 2191079,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/mm.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 42,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/geospecies.html#geospecies",
+      "name": "geospecies"
+    },
+    "nodes": 450609,
+    "edges": 2201532,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/geospecies.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 43,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/ipc.html#ipc",
+      "name": "ipc"
+    },
+    "nodes": 3401022,
+    "edges": 2931498,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/ipc.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 44,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/lib.html#lib",
+      "name": "lib"
+    },
+    "nodes": 3401355,
+    "edges": 2931880,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/lib.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 45,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/block.html#block",
+      "name": "block"
+    },
+    "nodes": 3423234,
+    "edges": 2951393,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/block.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 46,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/arch.html#arch",
+      "name": "arch"
+    },
+    "nodes": 3448422,
+    "edges": 2970242,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/arch.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 47,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/crypto.html#crypto",
+      "name": "crypto"
+    },
+    "nodes": 3464970,
+    "edges": 2988387,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/crypto.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  },
+  {
+    "id": 48,
+    "graph": {
+      "link": "https://jetbrains-research.github.io/CFPQ_Data/dataset/data/security.html#security",
+      "name": "security"
+    },
+    "nodes": 3479982,
+    "edges": 3003326,
+    "action": {
+      "link": "https://cfpq-data.storage.yandexcloud.net/4.0.0/graph/security.tar.gz",
+      "name": ".tar.gz 📥"
+    }
+  }
+]

@@ -1,0 +1,311 @@
+#include <iostream>
+#include <stack>
+#include <fstream>
+#include <cmath>
+#include <cstring>
+#include <omp.h>
+#include <windows.h>
+#include <list>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+struct NonZeroItem
+{
+	NonZeroItem() {}
+	NonZeroItem(long double* item, int number) :item(item), number(number) {}
+	long double* item;
+	int number;
+};
+void ExceptionInputs(void);
+class Method
+{
+public:
+	virtual void Execute(long double** A, long double* &X, long  double eps, int n, list<NonZeroItem>* not_zero_items) = 0;
+};
+
+class LAES
+{
+	long double** A;
+	int n;
+public:
+	LAES() {}
+	LAES(long double**& AA, int n)
+	{
+		A = AA; this->n = n;
+	}
+	LAES(int n)
+	{
+		this->n = n;
+		A = new long double* [n];
+		for (int i = 0; i < n; i++)
+		{
+			A[i] = new long double[n + 1];
+			memset(A[i], 0, (n+1) * (sizeof(long double)));
+		}
+		
+		for (int i = 0; i < n; i++)
+		{
+			long double* row = A[i];
+			int gen = rand() % 200 + 100; 
+			row[i] = gen;row[n] = rand() % 200 - 100;
+			int quater = 0.25 * (n-i), q_gen = 0.25 * gen;
+			for (int j = 0; j < quater; j++)
+			{
+				int p = rand() % (n-i-1)+i+1, q= rand() % (n - i-1) + i+1;
+				long double item = (rand() % (2 * q_gen) - q_gen + 0.0) / quater;
+				row[p] = item;
+				item = (rand() % (2 * q_gen) - q_gen + 0.0) / quater;
+				A[q][i] = item;
+			}
+		}
+	}
+	void ShowMatrix()
+	{
+		cout << "\n";
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j <= n; j++)
+				cout << A[i][j] << "\t";
+			cout << "\n";
+		}
+		/*for (int i = 0; i < n; i++)
+		{
+			for (auto iter = not_zero_items[i].begin(); iter != not_zero_items[i].cend(); iter++)
+				cout << *iter->item << "\t";
+			cout << "\n";
+		}*/
+
+	}
+	void Clear(long double**& AA)
+	{
+		for (int i = 0; i < n; i++) delete[] AA[i];
+		delete[] AA;
+	}
+	void Solve(Method* method)
+	{
+		if (n <= 10) ShowMatrix();
+		long double** AA = new long double* [n]; int n1 = n + 1, size = sizeof(long double);
+		for (int i = 0; i < n; i++)
+		{
+			AA[i] = new long double[n1];
+			memcpy(AA[i], A[i], n1 * size);
+		}
+		list<NonZeroItem>* not_zero_items= new list<NonZeroItem>[n];
+		for (int i = 0; i < n; i++)
+		{
+			long double* row = AA[i];
+			for (int j = (i + 1) % n, p = 0; p < n - 1; j = (j + 1) % n, p++)
+				if (row[j] != 0)
+					not_zero_items[i].push_back(NonZeroItem(&row[j], j));
+		}
+		long double* X = new long double[n];
+		memset(X, 0, size * n);
+		long int start = GetTickCount64();
+		method->Execute(AA,X,0.001 ,n,not_zero_items);
+		double time = (GetTickCount64() - start) / 1000.;
+		if (n <= 10)
+		{
+			cout << "x=(";
+			for (int i = 0; i < n; i++)
+			{
+				cout << X[i];
+				if (i < n - 1) cout << ";";
+			}
+			cout << ")\n";
+		}
+		cout << "Время работы: " << time << " сек" << endl;
+		Clear(AA);
+	}
+};
+
+
+
+class SeidelGauss :public Method
+{
+public:
+	SeidelGauss() {}
+	virtual void Execute(long double** A, long double*& X, long  double eps, int n, list<NonZeroItem>* not_zero_items) override
+	{
+		long double *Xp=new long double[n], Norma = eps + 1, a; memset(Xp, 0, sizeof(long double) * n);
+		for (int i = 0; i < n; i++)
+		{
+			long double* row = A[i];
+			a = row[i]; row[i] = 0;
+			for (int j = 0; j <= n; j++) row[j] /= a;
+		}
+		while (Norma > eps)
+		{
+			long double max = 0;
+			for (int i = 0; i < n; i++)
+			{
+				long double* row = A[i];
+				X[i] = row[n];
+				for (auto iter = not_zero_items[i].begin(); iter != not_zero_items[i].cend(); iter++)
+					X[i] -= *iter->item * X[iter->number];
+				//for (int j = 0; j < n; j++)
+					//X[i] -= row[j] * X[j];
+				long double norm = abs(Xp[i] - X[i]);
+				max = (norm > max) * (norm - max) + max;
+			}
+			memcpy(Xp, X, sizeof(long double) * n);
+			Norma = max;
+		}
+	}
+	bool DiagDominant(long double** A, int n)
+	{
+		long double S; bool F = true;
+		for (int i = 0; i < n; i++)
+		{
+			S = 0;
+			for (int j = 0; j < n; j++) if (i != j) S = S + abs(A[i][j]);
+			F = F && (abs(A[i][i]) >= S);
+		}
+		return F;
+	}
+
+};
+
+class SeidelGaussOMP :public Method
+{
+public:
+	SeidelGaussOMP() {}
+	virtual void Execute(long double** A, long double*& X, long  double eps, int n, list<NonZeroItem>* not_zero_items) override
+	{
+		long double* Xp = new long double[n], Norma = eps + 1, a; memset(Xp, 0, sizeof(long double) * n);
+	#pragma omp parallel for
+		for (int i = 0; i < n; i++)
+		{
+			long double* row = A[i];
+			a = row[i]; row[i] = 0;
+			for (int j = 0; j <= n; j++) row[j] /= a;
+		}
+		while (Norma > eps)
+		{
+			long double max = 0;
+			for (int i = 0; i < n; i++)
+			{
+				long double* row = A[i];
+				long double xx = row[n];
+				#pragma omp parallel for reduction(-:xx)
+				for (int j = 0; j < n; j++)
+					xx-= row[j] * X[j];
+				X[i] = xx;
+				long double norm = abs(Xp[i] - X[i]);
+				max = (norm > max) * (norm - max) + max;
+			}
+			memcpy(Xp, X, sizeof(long double) * n);
+			Norma = max;
+		}
+	}
+
+};
+
+
+class Menu
+{
+	LAES laes;
+	Method* Seidel_Gauss, * Seidel_Gauss_OMP;
+	Method* chosen_method;
+	Method** method = new Method * [3];
+public:
+	Menu()
+	{
+		Seidel_Gauss = new SeidelGauss(); Seidel_Gauss_OMP = new SeidelGaussOMP();
+		method[0] = Seidel_Gauss;
+		method[1] = Seidel_Gauss_OMP;
+		ReadFile();
+	}
+	void ReadFile()
+	{
+		ifstream f("matrix.dat"); // открыли файл для чтения
+		if (!f) { cout << "Нет файла входных данных matrix.dat\n"; return; }
+		int n;
+		f >> n;
+		long double** A = new long double* [n];
+		for (int i = 0; i < n; i++)
+		{
+			A[i] = new long double[n + 1];
+			for (int j = 0; j <= n; j++)
+			{
+				f >> A[i][j];
+			}
+		}
+		f.close();
+		laes = LAES(A, n);
+	}
+	void menu(void)
+	{
+		cout << "1) Решить СЛАУ последовательно с помощью метод Гаусса-Зейделя.\n";
+		cout << "2) Решить СЛАУ параллельно(OMP) с помощью метод Гаусса-Зейделя.\n";
+		cout << "3) Сгенерировать СЛАУ.\n";
+		cout << "4) Показать СЛАУ.\n";
+		cout << "5) Выход.\n";
+	}
+	void Show()
+	{
+		int k = -1;
+		while (k != 5)
+		{
+			k = -1;
+			menu();
+			while (k <= 0 || k > 5)
+			{
+				cout << "Введите правильно номер команды: ";
+				k = InputCmd();
+			}
+			switch (k)
+			{
+				case 1:case 2:chosen_method = method[k - 1]; laes.Solve(chosen_method); break;
+				case 3: GenerateLAES(); break;
+				case 4: laes.ShowMatrix(); break;
+			}
+			system("pause");
+			system("cls");
+		}
+	}
+	void GenerateLAES()
+	{
+		int n = 0;
+		while (n <= 0)
+		{
+			cout << "Введите размер квадратной матрицы: ";
+			cin >> n;
+			ExceptionInputs();
+		}
+		laes = LAES(n);
+		cout << "СЛАУ сгенерирована.\n";
+	}
+	int InputCmd(void)
+	{
+		int k = 0;
+		while ((k < 1) || (k > 5))
+		{
+			cin >> k;
+			ExceptionInputs();
+		}
+		return k;
+	}
+	void Execute()
+	{
+
+
+	}
+};
+
+int main(int argc, char** argv)
+{
+	int rank, size;
+	setlocale(LC_ALL, "Russian");
+	srand(time(NULL));
+	Menu menu;
+	menu.Show();
+	system("pause");
+}
+
+void ExceptionInputs(void)
+{
+	if (cin.fail())
+	{
+		cin.clear();
+		cin.ignore(32767, '\n');
+	}
+}
